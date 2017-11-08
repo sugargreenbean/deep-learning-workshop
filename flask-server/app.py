@@ -35,7 +35,7 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
 # Load in checkpoint with saved model
-saver = tf.train.import_meta_graph('models/pretrained_seq2seq.ckpt-90000.meta')
+saver = tf.train.import_meta_graph('models/pretrained_seq2seq.ckpt-100000.meta')
 saver.restore(sess, tf.train.latest_checkpoint('models'))
 zeroVector = np.zeros((1), dtype='int32')
 
