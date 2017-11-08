@@ -119,7 +119,7 @@ maxDecoderLength = maxEncoderLength
 lstmUnits = 112
 embeddingDim = lstmUnits
 numLayersLSTM = 3
-numIterations = 100000
+numIterations = 100001
 
 wordList = []
 
