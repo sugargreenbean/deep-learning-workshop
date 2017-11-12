@@ -48,7 +48,7 @@ def cleanMessage(message):
 	# Deal with some weird tokens
 	cleanedMessage = cleanedMessage.replace("\xc2\xa0", "")
 	# Remove punctuation
-	cleanedMessage = re.sub('([.,!?])','', cleanedMessage)
+	cleanedMessage = re.sub('([.,!?])','', cleanedMessage) #added space after stop punctuation
 	# Remove multiple spaces in message
 	cleanedMessage = re.sub(' +',' ', cleanedMessage)
 	return cleanedMessage
@@ -64,4 +64,4 @@ for key,value in combinedDictionary.items():
 	if (not key.strip() or not value.strip()):
 		# If there are empty strings
 		continue
-	conversationFile.write(key.strip() + value.strip())
+	conversationFile.write(key.strip() + ' '+ value.strip() + ' ')
