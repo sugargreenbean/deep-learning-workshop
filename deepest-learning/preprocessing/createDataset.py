@@ -48,7 +48,7 @@ def cleanMessage(message):
 	# Deal with some weird tokens
 	cleanedMessage = cleanedMessage.replace("\xc2\xa0", "")
 	# Remove punctuation
-	cleanedMessage = re.sub('([.,!?])','', cleanedMessage) #added space after stop punctuation
+	cleanedMessage = re.sub('([.,!?])','', cleanedMessage)
 	# Remove multiple spaces in message
 	cleanedMessage = re.sub(' +',' ', cleanedMessage)
 	return cleanedMessage
